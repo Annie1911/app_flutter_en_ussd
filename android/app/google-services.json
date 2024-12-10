@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "281920884335",
+    "project_id": "appussd-c0385",
+    "storage_bucket": "appussd-c0385.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:281920884335:android:ce82e67062800b74a3079a",
+        "android_client_info": {
+          "package_name": "com.example.gestion_menu_ussd"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7niDdeOor1SgUJ8_YFl_Ir8b6y1zPjag"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
