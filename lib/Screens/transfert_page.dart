@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gestion_menu_ussd/widgets/constcolor.dart';
 
+import 'operation_ussd_page.dart';
+
 class TransfertScrren extends StatefulWidget {
   const TransfertScrren({super.key});
 
@@ -191,7 +193,7 @@ class BuildServiceIcon extends StatelessWidget {
           ),
           child: IconButton(
             onPressed: () {
-              Nav
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>OperationUssdScreen()));
             },
             icon: Icon(iconNom, color: Colors.white),
           ),
@@ -220,9 +222,71 @@ class ListSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ;
+    return Column(
+      children: [
+        Expanded(
+            child: ListView(
+              children: [
+                RecentActivity(
+                  name: "Alex Macculam",
+                  amount: "-\$65.02",
+                  date: "25-12-2022",
+                  transactionType: "Send Money",
+                ),
+                RecentActivity(
+                  name: "Mac Dinner",
+                  amount: "-\$120.02",
+                  date: "25-12-2022",
+                  transactionType: "Cashout",
+                ),
+                RecentActivity(
+                  name: "Brandon King",
+                  amount: "+\$250.00",
+                  date: "01-01-2023",
+                  transactionType: "Received Money",
+                ),
+              ],
+
+        )),
+      ],
+    );
   }
 }
+
+
+class RecentActivity extends StatelessWidget {
+
+  final String name;
+  final String amount;
+  final String date;
+  final String transactionType;
+
+  const RecentActivity({
+    required this.name,
+    required this.amount,
+    required this.date,
+    required this.transactionType,
+  });
+
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: ListTile(
+        leading: CircleAvatar(
+          backgroundImage: AssetImage('assets/images/google_img.png'),
+        ),
+        title: Text(name),
+        subtitle: Text('$transactionType-$date'),
+        trailing: Text(amount,style: TextStyle(
+          color: amount.startsWith('-') ? Colors.red : Colors.green
+        ),),
+      ),
+    );
+  }
+}
+
 
 
 

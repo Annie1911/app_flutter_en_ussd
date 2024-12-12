@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gestion_menu_ussd/Screens/accueil_page.dart';
-
-import 'Screens/choix_page.dart';
 import 'Screens/transfert_page.dart';
 
 
